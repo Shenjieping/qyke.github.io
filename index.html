@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="./ke.js"></script>
-  <script src="./vue.min.js"></script>
+  <title>邱燕课程</title>
   <style>
     body {
       margin: 0 20px;
@@ -13,53 +12,20 @@
     ul .item {
       margin-top: 20px;
     }
-    ul .item .name {
-      color: #444;
-      font-size: 18px;
-    }
-    ol .sub-item {
-      line-height: 1.8;
-    }
-    ol .sub-item a {
+    ul .item a {
       color: #409eff;
       text-decoration: none;
-    }
-    ol .sub-item a:hover {
-      color: #f66;
     }
   </style>
 </head>
 <body>
-  <div id="app">
-    <ul class="list">
-      <li
-        class="item"
-        v-for="(item, key) in obj.plan.chapter_list[0].sub_course_list"
-        :key="key">
-        <div class="name">{{ item.name }}</div>
-        <ol>
-          <li
-            v-for="(itemSub, index) in item.task_list"
-            :key="index"
-            class="sub-item">
-            <a
-              :href="`https://ke.qq.com/webcourse/index.html#cid=325554&term_id=100504842&taid=${itemSub.taid}&type=1024&vid=5285890792833478188`"
-              target="_blank">{{ itemSub .name }}</a>
-          </li>
-        </ol>
-      </li>
-    </ul>
-  </div>
-  <script>
-    console.log(obj)
-    var vm = new Vue({
-      el: '#app',
-      data() {
-        return {
-          obj: obj.result
-        }
-      }
-    })
-  </script>
+  <ul>
+    <li class="item">
+      <a href="./python/index.html">python</a>
+    </li>
+    <li class="item">
+      <a href="./robotframework/index.html">robotframework</a>
+    </li>
+  </ul>
 </body>
 </html>
